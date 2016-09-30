@@ -145,10 +145,13 @@
             <p>Block features:</p>
             <ul>
               <li class="fragment">
-                The shouldn't define its geometry and positioning.
+                It shouldn't define its geometry and positioning.
               </li>
               <li class="fragment">
                 The block shouldn't influence its environment.
+              </li>
+              <li class="fragment">
+                Blocks can be composed of other blocks.
               </li>
             </ul>
             <aside class="notes">
@@ -202,10 +205,15 @@
             <p>Element features:</p>
             <ul>
               <li class="fragment">
-                The element's name describes its purpose, not its state.
+                Positioning and geometry rules should be applied to elements by the parent block.
               </li>
               <li class="fragment">
-                Positioning and geometry rules should be applied to elements by the parent block.
+                Elements can be nested inside elements
+                <br>
+                (but shouldn't be considered as sub-elements).
+              </li>
+              <li class="fragment">
+                An element can be another block.
               </li>
             </ul>
           </section>
