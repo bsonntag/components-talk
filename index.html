@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Legos on the Web</title>
+		<meta name="author" content="Benjamim Sonntag">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1>Legos on the Web</h1>
+          <img data-src="http://www.minijuegosgratis.com/v3/games/thumbnails/204639_1.jpg">
+					<p>
+            <small>
+              Created by Benjamim Sonntag for a <a href="sioslife.com">siosLIFE</a> talk & roll
+            </small>
+					</p>
+        </section>
+
+        <section>
+          <img height="500" data-src="http://bensbargains.com/thecheckout/wp-content/uploads/2013/05/lego-facebook.jpg">
+        </section>
+
+        <section>
+          <p>
+            Every web developer meets the same problems.
+          </p>
+          <img data-src="https://en.bem.info/ChhNUMI54FMJQEmmBRKqJJUPIJg.svgd"
+            alt="problems">
+        </section>
+
+        <section>
+          <h2>BEM Methodology</h2>
+          <p class="fragment">
+            It was invented to develop sites which should be
+            <br>
+            launched fast and supported for a long time.
+          </p>
+          <p class="fragment">
+            It helps to create extendable and reusable
+            <br>
+            interface components.
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <p>
+              BEM provides rules to...
+            </p>
+            <p class="fragment">
+              ...achieve code consistency.
+            </p>
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/w5nU6SYc32gqkgwfsRu5xyhDPG4.svg"
+              alt="code consistency part 1">
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/m0sTEdbQEBKOWemmRGffpMTzxDI.svg"
+              alt="code consistency part 2">
+          </section>
+
+          <section>
+            <p>
+              BEM provides rules to...
+            </p>
+            <p class="fragment">
+              ...grow and scale your codebase.
+            </p>
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/tz61V1CTPhjwoS_rw6kvzLivgyw.svg"
+              alt="grow and scale part 1">
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/fB7XUJ3HI2PJ1mmJUPbvcJPpyXE.svg"
+              alt="grow and scale part 2">
+            <aside class="notes">
+              Code grows following predefined rules.
+            </aside>
+          </section>
+
+          <section>
+            <p>
+              BEM provides rules to...
+            </p>
+            <p class="fragment">
+              ...increase productivity.
+            </p>
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/IPMcG97mVFYj0E0MeXBPJjRUhR0.svg"
+              alt="increase productivity part 1">
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/U4u2hNscmrz4XLHC5GVDCrxtIGI.svg"
+              alt="increase productivity part 2">
+            <aside class="notes">
+              Since code is reusable, less time is wasting re-inventing the wheel.
+              Simplicity of updates increases productivity.
+            </aside>
+          </section>
+
+          <section>
+            <p>
+              BEM provides rules to...
+            </p>
+            <p class="fragment">
+              ...improve team work.
+            </p>
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/NnaQyOua4RWO2DpbwHQYAmfJfPo.svg"
+              alt="improve team work part 1">
+            <img class="fragment" width="318" height="400" data-src="https://en.bem.info/X5n_8spfDNFgstApsDjUF-3vxD4.svg"
+              alt="improve team work part 2">
+            <aside class="notes">
+              Everyone speaks the same language.
+              Common terminology provides ability for developers to rapidly switch projects — everything is familiar.
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>Key concepts of BEM</h2>
+          <table class="fragment">
+            <tr><td>B</td><td>Block</td></tr>
+            <tr><td>E</td><td>Element</td></tr>
+            <tr><td>M</td><td>Modifier</td></tr>
+          </table>
+        </section>
+
+        <section>
+          <section>
+            <h2>Block</h2>
+            <p class="fragment">A functionally independent component.</p>
+            <p class="fragment">Being independent allows for their re-use.</p>
+            <p class="fragment">A block encapsulates behavior, layout and style.</p>
+          </section>
+
+          <section>
+            <p>Block features:</p>
+            <ul>
+              <li class="fragment">
+                The block's name describes its purpose, not its state.
+              </li>
+              <li class="fragment">
+                The block shouldn't influence its environment.
+              </li>
+            </ul>
+            <aside class="notes">
+              ("What is it?" — menu or button) VS ("What does it look like?" — red or big)
+              You shouldn't set the external geometry (margins or boundaries that affect the size) or positioning for the block.
+              In CSS, only class (and pseudo-class) selectors should be used.
+              This ensures the necessary independence for reusing blocks or moving them from place to place.
+            </aside>
+          </section>
+
+          <section>
+            <p>An example:</p>
+            <img data-src="https://en.bem.info/wgn8x_zZj488QHIuU6RT32BSUyw.png">
+          </section>
+
+          <section>
+            <p>Blocks can be nested inside any other blocks.</p>
+            <img data-src="https://en.bem.info/bT4kI2nbzXYfpj7hGbSGzdguTgE.png">
+          </section>
+
+          <section>
+            <p>
+              Blocks can be moved around on a page,
+              <br>
+              moved between pages or projects.
+            </p>
+            <img data-src="https://en.bem.info/wgn8x_zZj488QHIuU6RT32BSUyw.png">
+            <img data-src="https://en.bem.info/7TtrK0Xj7AR7zLHeV7rDQJF8jkI.png">
+            <aside class="notes">
+              The implementation of blocks as independent entities makes it possible to change their position on the page and ensures their proper functioning and appearance.
+              Thus, the logo and the authorization form can be swapped around without modifying the CSS or JavaScript code of the blocks.
+            </aside>
+          </section>
+
+          <section>
+            <p>Blocks can be re-used multiple times.</p>
+            <img data-src="https://en.bem.info/c-k0hGArGcvClQjQmt8J2uLwVqU.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Element</h2>
+            <p class="fragment">A constituent part of a block that can't be used outside of it.</p>
+            <aside class="notes">
+              For example, a menu item is not used outside of the context of a menu block, therefore it is an element.
+            </aside>
+          </section>
+
+          <section>
+            <p>Element features:</p>
+            <ul>
+              <li class="fragment">
+                The element's name describes its purpose, not its state.
+              </li>
+              <li class="fragment">
+                Positioning and geometry rules should be applied to elements by the parent block.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <p>An example:</p>
+            <img data-src="https://en.bem.info/kTs-O0UleMeD8J2I1DPm_KtS8_o.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Modifier</h2>
+            <p class="fragment">Defines the appearance and behavior of a block or element.</p>
+            <p class="fragment">A block is changed by adding or removing modifiers.</p>
+            <p class="fragment">This frees you from unneeded copying and pasting.</p>
+          </section>
+
+          <section>
+            <p>An example:</p>
+            <img data-src="https://en.bem.info/ZXEdAN-ZAJfX2yv4BwpqUZSY5R0.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>SUIT CSS naming convention</h2>
+            <ul>
+              <li class="fragment">Blocks: <code class="hljs">.Button</code></li>
+              <li class="fragment">Elements: <code class="hljs">.Button-icon</code></li>
+              <li class="fragment">
+                Modifiers:
+                <code class="hljs fragment">.Button--primary</code>
+                <div class="fragment">
+                  <code class="hljs">.Button.is-active</code>
+                  <code class="hljs">.Button.is-disabled</code>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Atomic Design</h2>
+            <p>by Brad Frost</p>
+            <blockquote cite="http://atomicdesign.bradfrost.com/">
+              &ldquo;Atomic design is a methodology composed of five distinct stages
+              working together to create interface design systems
+              in a more deliberate and hierarchical manner.&rdquo;
+            </blockquote>
+            <aside class="notes">
+              The author was interested in what our interfaces are comprised of
+              and how we can construct design systems in a more methodical way.
+            </aside>
+          </section>
+
+          <section>
+            <img height="500" data-src="http://atomicdesign.bradfrost.com/images/content/atomic-design-process.png">
+          </section>
+
+          <section>
+            <h3>Atoms</h3>
+            <img height="350" src="http://bradfrost.com/wp-content/uploads/2013/06/atoms.jpg">
+          </section>
+
+          <section>
+            <h3>Molecules</h3>
+            <img height="350" src="http://bradfrost.com/wp-content/uploads/2013/06/molecule.jpg">
+          </section>
+
+          <section>
+            <h3>Organisms</h3>
+            <img src="http://bradfrost.com/wp-content/uploads/2013/06/organism2.jpg">
+          </section>
+
+          <section>
+            <h3>Templates</h3>
+            <img height="400" src="http://bradfrost.com/wp-content/uploads/2013/06/template1.jpg">
+          </section>
+
+          <section>
+            <h3>Pages</h3>
+            <img height="400" src="http://bradfrost.com/wp-content/uploads/2013/06/page1.jpg">
+          </section>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <img data-src="https://img1.etsystatic.com/071/0/10254256/il_570xN.827601573_4ckd.jpg">
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
